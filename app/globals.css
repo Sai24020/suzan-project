@@ -7,18 +7,6 @@
 
 /*@custom-variant dark (&:is(.dark *));  Unknown at rule*/
 
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-
-}
-
 html,
 body {
   max-width: 100vw;
