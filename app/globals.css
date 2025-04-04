@@ -1,7 +1,23 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @import "tw-animate-css";
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 
-@custom-variant dark (&:is(.dark *));
+/*@custom-variant dark (&:is(.dark *));  Unknown at rule*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+
+}
 
 html,
 body {
@@ -16,8 +32,6 @@ body {
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 a {
@@ -138,11 +152,27 @@ a {
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-@layer base {
+/*@layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50;   Unknown at rule @apply*
   }
   body {
     @apply bg-background text-foreground;
+  }
+}*/
+
+@layer base {
+  h1 {
+    font-size: var(--text-2xl);
+  }
+  h2 {
+    font-size: var(--text-xl);
+  }
+  h3 {
+    font-size: var(--text-lg);
+  }
+  a {
+    color: var(--color-blue-600);
+    text-decoration-line: underline;
   }
 }
