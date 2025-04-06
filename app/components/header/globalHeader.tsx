@@ -38,14 +38,14 @@ export default function GlobalHeader() {
         <div className=" ml-9 bg-blue-200 w-14 rounded-full mt-0">
         <Image src="/icons/logo.png" alt="company logo" width={50} height={50} />
         <div className='mb-1 ml-1'>
-              <span className="text-black font-bold">G</span>
-              <span className="text-white">A</span>
-              <span className="text-red-500">Z</span>
+              <span className="text-black font-bold">S</span>
+              <span className="text-white">U</span>
+              <span className="text-red-500">M</span>
               <span className="text-green-900">A</span>
             </div>
             </div>
           <h1 className="font-bold text-3xl text-blue-200">
-            SM_PAL </h1>
+            S U M A </h1>
         
         </div>    
         </Link>
