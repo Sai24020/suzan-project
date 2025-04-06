@@ -1,7 +1,7 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 @layer theme, base, components, utilities;
-@import "tailwindcss/theme.css" layer(theme);
+/*@import "tailwindcss/theme.css" layer(theme);
 @import "tailwindcss/preflight.css" layer(base);
 @import "tailwindcss/utilities.css" layer(utilities);
 
@@ -114,7 +114,7 @@ a {
   --sidebar-ring: oklch(0.553 0.013 58.071);
 }
 
-@theme inline {
+/*@theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
