@@ -9,21 +9,21 @@ import FooterAdressInfo from "./footer-bar/footer-adress-info";
 export default function GlobalFooter() {
   return (
     <>
-    <footer className="">
-    <div className="">
+    <footer className="flex bg-[url('/images/sky1.jpg')] bg-center bg-no-repeat bg-cover shadow-md items-center justify-between text-white py-8 border-t-2">
+    <div className="container mx-auto px-4">
         {/* Logotyp + Företagsnamn */}
-        <header className="">
+        <header className="mb-4 flex items-center bg-gradient-to-tl to-gray-600 rounded-2xl">
           <Image 
             src="/icons/logo.png" 
             alt="SUMA E-commerce logo" 
             width={40} 
             height={40}
-            className=""
+            className="mb-2"
           />
-          <h3 className="">SUMA</h3>
+          <h3 className="text-3xl p-2 font-bold text-blue-300 mt-1 ml-2"> S U M A </h3>
         </header>
 
-        <div className="">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
           {/* Navigationslänkar */}
           <FooterNav />
 
@@ -39,8 +39,8 @@ export default function GlobalFooter() {
         </div>
 
         {/* Copyright-text */}
-        <p className="">
-          © 2025 SU_PAL E-commerce <strong>@SUMA AB.</strong> All rights reserved.
+        <p className="text-center mt-6 text-sm opacity-80">
+          © 2025 SU_PAL E-commerce <strong className="underline">@SUMA AB.</strong> All rights reserved.
         </p>
       </div>
     </footer>

@@ -35,7 +35,7 @@ export default function GlobalHeader() {
         <Link href="/" className="flex items-center justify-center space-x-2">
         <div className="flex items-center justify-center space-x-2">
         
-        <div className=" ml-9 bg-blue-200 w-14 rounded-full mt-0 hover:bg-red-400 ">
+        <div className=" ml-9 bg-blue-200 w-14 rounded-full mt-0 hover:bg-red-400 bg-gradient-to-tl to-gray-600 rounded-2xl">
         <Image src="/icons/logo.png" alt="company logo" width={50} height={50} />
         <div className='mb-1 ml-1'>
               <span className="text-black font-bold">S</span>
@@ -44,7 +44,7 @@ export default function GlobalHeader() {
               <span className="text-green-900">A</span>
             </div>
             </div>
-          <h1 className="font-bold text-3xl text-blue-200  hover:text-red-400">
+          <h1 className="font-bold text-3xl text-blue-200  hover:text-red-400 p-2 bg-gradient-to-tl to-gray-600 rounded-2xl">
             S U M A </h1>
         
         </div>    
@@ -104,7 +104,7 @@ export default function GlobalHeader() {
         <div> 
         <header className="flex bg-[url('/images/tree2.jpg')] bg-center bg-no-repeat bg-cover shadow-md px-6 py-7 ">
         <a href={"/profile"}>
-        <span className='text-yellow-300 hover:text-amber-50 hover:text-5xl text-2xl bold text-shadow-amber-800 cursor-pointer'>
+        <span className='text-yellow-300 p-2 bg-gradient-to-tl to-gray-600 rounded-2xl hover:text-amber-50 hover:text-5xl text-2xl bold text-shadow-amber-800 cursor-pointer'>
           Min PROFILE
         </span>
         </a>
