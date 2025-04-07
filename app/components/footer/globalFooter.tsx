@@ -3,12 +3,14 @@
 import Image from "next/image";
 import FooterNav from "./footer-bar/footer-nav";
 import FooterSocialLinks from "./footer-bar/footer-social-links";
+import FooterKontaktInfo from "./footer-bar/footer-kontakt-info";
+import FooterAdressInfo from "./footer-bar/footer-adress-info";
 
 export default function GlobalFooter() {
   return (
     <>
     <footer className="">
-   
+    <div className="">
         {/* Logotyp + Företagsnamn */}
         <header className="">
           <Image 
@@ -30,14 +32,10 @@ export default function GlobalFooter() {
           <FooterSocialLinks />         
 
           {/* Kontaktinformation */}
-          <div className="">
-            <h3 className="">CONTACT</h3>
-          </div>
+          <FooterKontaktInfo />
 
           {/* Adressinformation */}
-          <div className="">
-            <h3 className="">ADDRESS</h3>
-       
+          <FooterAdressInfo />  
         </div>
 
         {/* Copyright-text */}
