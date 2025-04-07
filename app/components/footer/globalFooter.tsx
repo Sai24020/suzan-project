@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import FooterNav from "./footer-bar/footer-nav";
+import FooterSocialLinks from "./footer-bar/footer-social-links";
 
 export default function GlobalFooter() {
   return (
@@ -26,9 +27,7 @@ export default function GlobalFooter() {
 
           
           {/* Sociala medier */}
-          <div className="">
-            <h3 className="">SOCIAL MEDIA</h3>
-          </div>         
+          <FooterSocialLinks />         
 
           {/* Kontaktinformation */}
           <div className="">
