@@ -35,7 +35,7 @@ export default function GlobalHeader() {
         <Link href="/" className="flex items-center justify-center space-x-2">
         <div className="flex items-center justify-center space-x-2">
         
-        <div className=" ml-9 bg-blue-200 w-14 rounded-full mt-0">
+        <div className=" ml-9 bg-blue-200 w-14 rounded-full mt-0 hover:bg-red-400 ">
         <Image src="/icons/logo.png" alt="company logo" width={50} height={50} />
         <div className='mb-1 ml-1'>
               <span className="text-black font-bold">S</span>
@@ -44,7 +44,7 @@ export default function GlobalHeader() {
               <span className="text-green-900">A</span>
             </div>
             </div>
-          <h1 className="font-bold text-3xl text-blue-200">
+          <h1 className="font-bold text-3xl text-blue-200  hover:text-red-400">
             S U M A </h1>
         
         </div>    
@@ -52,12 +52,12 @@ export default function GlobalHeader() {
         {/* Middle Icons: Search + Filter */}
         <div className="flex items-center space-x-4 text-white">
           {/* Search Toggle */}
-          <button onClick={() => setSearchOpen(!searchOpen)} className="text-2xl cursor-pointer">
+          <button onClick={() => setSearchOpen(!searchOpen)} className="text-2xl cursor-pointer p-2 hover:bg-red-400">
             {searchOpen ? <IoClose /> : <FaSearch />}
           </button>
 
           {/* Filter Toggle */}
-          <button onClick={() => setSortOpen(!sortOpen)} className="text-2xl cursor-pointer">
+          <button onClick={() => setSortOpen(!sortOpen)} className="text-2xl cursor-pointer p-2 hover:bg-red-400">
             {sortOpen ? <IoClose /> : <FaFilter />}
           </button>
         </div>
@@ -68,9 +68,9 @@ export default function GlobalHeader() {
             {menuOpen ? <IoClose /> : <FaBars />}
           </button>
           <ul className={`md:flex gap-4 ${menuOpen ? "block" : "hidden"} absolute md:static top-26 left-0 right-0 bg-white md:bg-transparent border md:border-0 p-2 md:p-0`}>
-            <li><a href="/products" className="bg-gray-800 block p-2 border-b md:border-0 text-center w-full">PRODUCTS</a></li>
-            <li><a href="/about" className="bg-gradient-to-r from-red-500 to-white p-1 border-b md:border-0 block text-black text-center w-full">ABOUT</a></li>
-            <li><a href="/contact" className="bg-green-900 block p-2 text-center w-full">CONTACT</a></li>
+            <li><a href="/products" className="bg-gray-800 block p-2 border-b md:border-0 text-center w-full  hover:bg-red-400">PRODUCTS</a></li>
+            <li><a href="/about" className="bg-gradient-to-r from-red-500 to-white p-2 border-b md:border-0 block text-black text-center w-full hover:text-2xl">ABOUT</a></li>
+            <li><a href="/contact" className="bg-green-900 block p-2 text-center w-full  hover:bg-red-400">CONTACT</a></li>
           </ul>
         </div>
       </header>
@@ -102,8 +102,13 @@ export default function GlobalHeader() {
       )}
           {/* Image med tittle min profile sen länk till min profile(CV) */}
         <div> 
-          <header className="flex bg-[url('/images/tree2.jpg')] bg-center bg-no-repeat bg-cover shadow-md px-6 py-7">Min PROFILE
-          </header>
+        <header className="flex bg-[url('/images/tree2.jpg')] bg-center bg-no-repeat bg-cover shadow-md px-6 py-7 ">
+        <a href={"/profile"}>
+        <span className='text-yellow-300 hover:text-amber-50 hover:text-5xl text-2xl bold text-shadow-amber-800 cursor-pointer'>
+          Min PROFILE
+        </span>
+        </a>
+        </header>
         </div>
     </div>
   );
