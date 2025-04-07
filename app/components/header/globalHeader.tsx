@@ -32,7 +32,7 @@ export default function GlobalHeader() {
 
      
         {/* Logo and Name of E-commerce  <header className="flex bg-black shadow-md px-4 py-3 items-center justify-between">*/}
-        <Link href="/" className="flex items-center justify-center space-x-2">
+        <Link href="/" className="flex items-center justify-center space-x-2 hover:text-2xl">
         <div className="flex items-center justify-center space-x-2">
         
         <div className=" ml-9 bg-blue-200 w-14 rounded-full mt-0">
@@ -102,8 +102,8 @@ export default function GlobalHeader() {
       )}
           {/* Image med tittle min profile sen länk till min profile(CV) */}
         <div> 
-          <header className="flex bg-[url('/images/tree2.jpg')] bg-center bg-no-repeat bg-cover shadow-md px-6 py-7">Min PROFILE
-          </header>
+        <header className="flex bg-[url('/images/tree2.jpg')] bg-center bg-no-repeat bg-cover shadow-md px-6 py-7 "><span className='text-yellow-300 hover:text-amber-50 hover:text-5xl text-2xl bold text-shadow-amber-800 cursor-pointer'>Min PROFILE</span>
+        </header>
         </div>
     </div>
   );

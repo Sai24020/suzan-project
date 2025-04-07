@@ -1,8 +1,12 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import GlobalTitelWithImage from "./components/header/globalTitelWithImage";
 
 export default function Home() {
   return (
+    <>
+    <GlobalTitelWithImage />
+  
     <div className={styles.page}>
       <main className={styles.main}>
         <Image
@@ -90,6 +94,7 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer>
-    </div>
+    </div> 
+     </>
   );
 }
