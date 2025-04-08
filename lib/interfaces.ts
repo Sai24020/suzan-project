@@ -1,5 +1,4 @@
-// API product    
-  export interface Product {
+export interface Product {
     id: number;
     title: string;
     description: string;
@@ -9,20 +8,16 @@
     shippingInformation: string;
     returnPolicy: string;
     images: string[];
-    image: string;
     thumbnail: string;
     discountPercentage: number;
-    rating: Rating;
+    rating: number;
     stock: number;
     tags: string[];
     brand: string;
 
 }
-export interface Rating {
-    count: number;
-    rate: number;
-}
-  export interface ProductResultList {
+
+export interface Products {
     products: Product[];
     total: number;
     skip: number;
@@ -39,5 +34,17 @@ export interface NamedAPIResource {
     url: string;
 }
 
+export interface Categories {
+    slug: string;
+    name: string;
+    url: string;
+}
 
- 
+export interface MappedCategories {
+Technology: string[];
+Clothing: string[];
+Home: string[];
+Beauty: string[];
+Accessories: string[];
+Vehicles: string[];
+}
