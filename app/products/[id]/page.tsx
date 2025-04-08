@@ -56,7 +56,7 @@ export default async function ProductPage({ params }: Props) {
                 <h2 className="text-2xl font-bold p-2 bg-gradient-to-tl to-amber-300 rounded-2xl leading-none tracking-tight">{ title }</h2>
                 </header> 
                 <Image
-                    className=""
+                    className="w-full max-w-[260px] px-4 object-contain"
                     src={product.thumbnail}
                     alt=""
                     width={200}
@@ -66,13 +66,13 @@ export default async function ProductPage({ params }: Props) {
             </div>
             <section className=" grid gap-2 px-4 border-b pb-4 border-gray-400">
           <div className="flex gap-2 items-center">
-            <span>Rating:</span> <Ratings rating={Ratings.rate} />
+            <span className="text-xl text-yellow-200">Rating:</span> <Ratings rating={Ratings.rate} />
           </div>
                 <p className="text-m text-muted-foreground text-black">{ description }</p>
                 <footer>
             <dl className="text-2xl  pb-4 flex items-center p-6 pt-0">
                     <dt className="sr-only">Price:</dt>
-                    <dd>${ price }</dd>
+                    <dd className="text-center text-2xl text-red-600" >${ price }</dd>
                 </dl>
             </footer>
             </section> 
