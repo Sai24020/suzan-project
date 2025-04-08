@@ -35,7 +35,7 @@ export default function GlobalHeader() {
         <Link href="/" className="flex items-center justify-center space-x-2">
         <div className="flex items-center justify-center space-x-2">
         
-        <div className=" ml-9 bg-blue-200 w-14 rounded-full mt-0 hover:bg-red-400 bg-gradient-to-tl to-gray-600 rounded-2xl">
+        <div className=" ml-9 bg-blue-200 w-14 rounded-full mt-0 hover:bg-red-400 bg-gradient-to-tl to-gray-600">
         <Image src="/icons/logo.png" alt="company logo" width={50} height={50} />
         <div className='mb-1 ml-1'>
               <span className="text-black font-bold">S</span>
