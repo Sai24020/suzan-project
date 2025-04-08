@@ -1,15 +1,15 @@
 
 // Basic product page
 
-//import PaginationNav from "";
 import { API_ENDPOINT } from "@/app/data-access/endpoints";
 import { fetchFromAPI } from "@/app/data-access/actions";
 import { Metadata } from "next";
-
 import { Products } from "@/lib/interfaces";
 import { fetchProducts } from "@/app/data-access/actions";
-//import { CardList } from "";
+import { CardList } from "../components/product/cards-list";
+import PaginationNav from "../components/pagination/pagNav";
 
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Product Listing",
@@ -43,29 +43,30 @@ console.log(data);
     }
 
     return (
-      <>
+      <div className="bg-gradient-to-tl to-gray-600 rounded-2xl">
       
-        <ul className="grid grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-4 mx-4 my-8">
+        <ul className="grid grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-4 mx-4 my-8 ">
           <div>
-        <h1 className="text-3xl font-bold mt-4">Products Collection</h1>
-      <img
-        src="https://res.cloudinary.com/demo/image/upload/f_auto/q_auto/w_1800,ar_3:1,c_fill/docs/colored_pencils"
-        alt="Placeholder"
-        className="w-full h-auto rounded"
-      /> 
+        <h1 className="flex bg-[url('/images/shop_now.jpg')] bg-center bg-no-repeat bg-cover shadow-md px-6 py-7 text-3xl font-bold mt-4 mb-4">Products Collection</h1>
+
                 <CardList products={data.products} totalProducts={total} />
                 </div>
         </ul>
 <div className="flex flex-row">
+<ul className="grid grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-4 mx-auto my-8 mb-34">
+
+<p>Showing limit:{parsedLimit} av products, skip:{parsedSkip}, page:{parsedSkip+1}</p>
+
         <PaginationNav
           path="products"
           pagesCount={total}
           limit={parsedLimit}
           skip={parsedSkip}
         />
-        <p>Showing limit:{parsedLimit} av products, skip:{parsedSkip}, page:{parsedSkip+1}</p>
+      
+        </ul>
         </div>
-      </>
+      </div>
     );
   } catch (error) {
     console.error("Error fetching products:", error);
