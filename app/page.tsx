@@ -8,6 +8,7 @@ export default function Home() {
     <GlobalTitelWithImage />
   
     <div className={styles.page}>
+      
       <main className={styles.main}>
         <Image
           className={styles.logo}
