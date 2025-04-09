@@ -1,5 +1,5 @@
 // Basic product page    <p>This will be the products page</p>
- 
+/* 
 import { Product } from "@/lib/interfaces"
 import { fetchProduct } from "@/app/data-access/actions"
 import Image from "next/image"
@@ -79,4 +79,23 @@ export default async function ProductPage({ params }: Props) {
 
         </main>
     )
+}*/
+import { fetchProduct } from "@/app/data-access/actions";
+import { ProductDetailsCard } from "@/app/components/product/product-details";
+import { Suspense } from "react";
+
+//get the dynamic id from the page url and use that to fetch products
+export default async function ProductPage({
+  params,
+}: {
+  params: Promise<{ id: number}>;
+}) {
+  //since params is a promise we have to await it first
+  const { id } = await params;
+  const data = fetchProduct(id);
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProductDetailsCard product={data} />
+    </Suspense>
+  );
 }

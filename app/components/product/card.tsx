@@ -10,6 +10,9 @@ export function Card({ product }: { product: Product }) {
 
   return (
     <li className={styles.cardContainer}>
+            <div className={styles.cardTitelContainer}>
+            <h2 className={styles.cardTitle}>{product.title}</h2>
+            </div>
       <div className={styles.cardImageContainer}>
         <Link href={`/products/${product.id}`}>
           <Image
@@ -20,14 +23,13 @@ export function Card({ product }: { product: Product }) {
             alt={`Bild ${product.title}`}
           />
         </Link>
+ 
       </div>
-      <div className={styles.cardTitelContainer}>
-        <h2 className={styles.cardTitle}>{product.title}</h2>
         <div className={styles.cardPriceContainer}>
           <p className={styles.cardPrice}>${product.price}</p>
           <span className={styles.cardDiscount}>{product.discountPercentage}%</span>
         </div>
-      </div>
+  
     </li>
   );
 }
