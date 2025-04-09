@@ -144,6 +144,8 @@ export default function Header() {
                             <li><Link href="/" onClick={() => setIsOpen(false)}>FILTER</Link></li>
                             <li><Link href="/" onClick={() => setIsOpen(false)}>CART</Link></li>
                             <li><Link href="/" onClick={() => setIsOpen(false)}>FAVORITE</Link></li>
+                            <li><hr /></li>
+                            <li><Link href="/" onClick={() => setIsOpen(false)}>CATEGORY</Link></li>
                         </ul>
                     </div>
                 </div>
