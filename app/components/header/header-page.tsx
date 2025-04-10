@@ -20,7 +20,7 @@ export default function Header() {
             alert("Sökningen måste vara längre än 2 karaktärer");
             return;
         }
-        router.push(`/search?query=${searchQuery}`);
+        router.push(`/products/search?query=${searchQuery}`);   //efter flyta folder search fixa här
         setIsSearchOpen(false);
     };
 
@@ -122,6 +122,7 @@ export default function Header() {
                     <div className="hidden md:flex flex-1 justify-center">
                         <ul className="flex space-x-6  text-blue-300 text-2xl">
                             <li><Link href="/" className="hover:bg-white">HOME</Link></li>
+                            <li><Link href="/products" className="hover:bg-white">PRODUCTS</Link></li>
                             <li><Link href="/about" className="hover:bg-white">ABOUT</Link></li>
                             <li><Link href="/contact" className="hover:bg-white">CONTACT</Link></li>
                             <li><Link href="/profile" className="hover:bg-white hidden">PROFILE</Link></li>
@@ -138,14 +139,19 @@ export default function Header() {
                         </div>
                         <ul className="flex flex-col p-4 space-y-4 ">
                             <li><Link href="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-                            <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
-                            <li><Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
-                            <li><Link href="/profile" onClick={() => setIsOpen(false)}>PROFILE</Link></li>
+                            <li><hr /></li>
+                            <li><Link href="/products"onClick={() => setIsOpen(false)}>PRODUCTS</Link></li>
+                            <li><hr /></li>
                             <li><Link href="/" onClick={() => setIsOpen(false)}>FILTER</Link></li>
                             <li><Link href="/" onClick={() => setIsOpen(false)}>CART</Link></li>
                             <li><Link href="/" onClick={() => setIsOpen(false)}>FAVORITE</Link></li>
                             <li><hr /></li>
                             <li><Link href="/" onClick={() => setIsOpen(false)}>CATEGORY</Link></li>
+                            <li><hr /></li>
+                            <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
+                            <li><Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+                            <li><hr /></li>
+                            <li><Link href="/profile" onClick={() => setIsOpen(false)}>PROFILE</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -172,11 +178,12 @@ export default function Header() {
           Min PROFILE
         </span>
         </a>
-        <Form action="/search " className='relative flex gap-5 items-center justify-between h-20 px-25'>
+        <Form action="/products/search " className='relative flex gap-5 items-center justify-between h-20 px-25'>
           {/* On submission, the input value will be appended to the URL, e.g. /search?query=abc */}
              <Search className="absolute right-135 top-10 h-4 w-4 text-muted-foreground -translate-y-1/2" />
-                 <input name="query" className='w-100 pl-10' type="search" placeholder="Search for product" />
-                 <button type="submit" className="flex bg-[url('/icons/logo.png')]"></button>
+                 <input name="query" className='w-100 pl-10' type="search" placeholder="Search for product" required/>
+               
+                 <button type="submit" className="flex bg-[url('/icons/logo.png')] cursor-pointer rounded-b-3xl text-red-500 bg-green-400 p-1 hover:text-amber-50 hover:bg-amber-600"><Search/></button>
          </Form>  
         </footer>
  

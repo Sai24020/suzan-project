@@ -83,6 +83,14 @@ export default async function ProductPage({ params }: Props) {
 import { fetchProduct } from "@/app/data-access/actions";
 import { ProductDetailsCard } from "@/app/components/product/product-details";
 import { Suspense } from "react";
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: {
+    default: 'PRODUCTS', // a default is required when creating a template
+    template: '%s | PRODUCTS'
+    },
+  }
 
 //get the dynamic id from the page url and use that to fetch products
 export default async function ProductPage({

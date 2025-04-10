@@ -1,5 +1,5 @@
 'use client'
-import SearchResults from '../components/header/search-results';
+import SearchResults from '@/app/components/header/search-results';
 import { useSearchParams } from 'next/navigation';
 
 export default function SearchPage() {
@@ -10,7 +10,9 @@ export default function SearchPage() {
 
     return (
         <main>
-            <h1>Search: {query}</h1>
+             <h1 className="flex bg-[url('/images/shop_now.jpg')] bg-center bg-no-repeat bg-cover shadow-md px-6 py-7 text-3xl font-bold mt-4 mb-4">
+             Search about : {query}</h1>
+   
             {/* generera kort från apiet som är från sök */}
             <SearchResults query={query} />
         </main>
