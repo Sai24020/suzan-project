@@ -3,6 +3,14 @@
 import React, { useEffect, useState } from 'react'
 import { Product } from "@/lib/interfaces";
 import { CardList } from '@/app/components/product/cards-list';
+import type { Metadata } from 'next'
+ 
+export const metadata: Metadata = {
+  title: {
+    default: 'SEARCH', // a default is required when creating a template
+    template: '%s | SEARCH'
+    },
+  }
 
 interface searchResultsProps {
     query: string | null;
@@ -34,11 +42,17 @@ export default function SearchResults({ query }: searchResultsProps) {
 
     if (loading) return <p>Searching for products...</p>
     return (
-        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-            <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
+        <div className="bg-gradient-to-tl to-gray-600 rounded-2xl">
+      
+        <ul className="grid grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-4 mx-4 my-8 ">
+          <div>
+       
 
-                <CardList products={product} totalProducts={total} />
-            </main>
+        <CardList products={product} totalProducts={total} />
+                </div>
+        </ul>
+                
+          
         </div>
     )
 }
