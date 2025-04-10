@@ -1,5 +1,6 @@
 
 import styles from "@/app/components/category/category.module.css"; // Import the CSS module
+import SearchResultsByCategory from "./category-results";
 
 
 export default function CategoryHeading({ children }: { children: string }) {
