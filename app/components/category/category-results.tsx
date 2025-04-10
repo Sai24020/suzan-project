@@ -30,7 +30,11 @@ export default function SearchResultsByCategory({ categoryName }: SearchResultsB
     fetchProducts();
   }, [categoryName]);
 
-  if (loading) return <p>Searching for products...</p>;
+  if (loading) 
+  return    //fint bild när loading searching for products
+        <div className="flex bg-[url('/images/pngtree-colorful-loading-icon.jpg')] bg-amber-100 bg-center bg-no-repeat bg-cover shadow-md px-6 py-7">
+            <p className='shadow-md px-6 py-7 text-3xl font-bold mt-4 mb-4'>Searching for products...</p>
+       </div>
 
   return (
     <div className={styles.categoryHeaderContainer}>
