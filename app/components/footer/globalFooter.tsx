@@ -40,7 +40,7 @@ export default function GlobalFooter() {
 
         {/* Copyright-text */}
         <p className="text-center mt-6 text-sm opacity-80">
-          © 2025 SU_PAL E-commerce <strong className="underline">@SUMA AB.</strong> All rights reserved.
+        &copy;  2024 - {new Date().getFullYear()} |  SU_PAL E-commerce <strong className="underline">@SUMA AB.</strong> All rights reserved.
         </p>
       </div>
     </footer>

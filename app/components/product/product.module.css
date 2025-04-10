@@ -1,0 +1,72 @@
+/* product-bar.module.css */
+
+.productBarContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  .productBarHeader {
+    width: 100%;
+    max-width: 56rem; /* 4xl max-width */
+  }
+  
+  .productBarTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .productBarTitle h2 {
+    color: #e11d48; /* Red color */
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .productBarSubheading {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    align-items: center;
+  }
+  
+   
+  /* Add styles for the selected product heading */
+  .productHeading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black; /* black */
+    margin-top: 2rem;
+  }
+  
+.container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Default gap for small screens */
+  }
+  
+  .containerMd {
+    gap: 0.75rem; /* Gap for medium screens */
+  }
+  
+  .containerLg {
+    gap: 1rem; /* Gap for large screens */
+  }
+  
+  .redBox {
+    background-color: #f87171; /* Tailwind's bg-red-600 */
+    width: 0.5rem; /* Tailwind's w-2 */
+    height: 1.25rem; /* Tailwind's h-5 */
+    border-radius: 0.125rem; /* Tailwind's rounded-xs */
+  }
+  
+  .redBoxMd {
+    height: 1.5rem; /* Tailwind's md:h-6 */
+  }
+  
+  .redBoxLg {
+    height: 1.75rem; /* Tailwind's lg:h-7 */
+  }
