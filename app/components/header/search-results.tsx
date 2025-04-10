@@ -40,7 +40,7 @@ export default function SearchResults({ query }: searchResultsProps) {
 
     }, [query])
 
-    if (loading) return <p>Searching for products...</p>
+    if (loading) return <div className="flex bg-[url('/images/pngtree-colorful-loading-icon.jpg')] bg-amber-100 bg-center bg-no-repeat bg-cover shadow-md px-6 py-7"><p className='shadow-md px-6 py-7 text-3xl font-bold mt-4 mb-4'>Searching for products...</p></div>
     return (
         <div className="bg-gradient-to-tl to-gray-600 rounded-2xl">
       

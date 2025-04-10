@@ -80,7 +80,7 @@ export default function Header() {
 
                     {/* Search icon for desktop */}
                     <div>
-                        <FaSearch className="text-2xl cursor-pointer text-blue-300 hover:bg-white hidden md:block"
+                        <FaSearch className="text-2xl cursor-pointer text-yellow-300 hover:text-blue-300 hover:bg-white hidden md:block"
                             onClick={handleSearch} />
                     </div>
 
