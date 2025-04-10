@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { Product } from "@/lib/interfaces";
 import { CardList } from '@/app/components/product/cards-list';
-import styles from "@/app/components/category/category.module.css"; // Import the CSS module
+import styles from "@/app/components/product/product.module.css"; // Import the CSS module
 
 interface SearchResultsByCategoryProps {
   categoryName: string | null;
