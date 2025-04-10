@@ -32,8 +32,8 @@ import {
 } from "react-icons/fa";
 
 import { useState } from "react";
-
-import styles from "@/app/components/2-category-bar/category-bar.module.css"; // Import the CSS module
+import styles from "@/app/components/category/category.module.css"; // Import the CSS module
+import CategoryBtn from "./category-btn";
 
 export default function CategoryBar() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
