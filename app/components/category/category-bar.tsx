@@ -34,6 +34,7 @@ import {
 import { useState } from "react";
 import styles from "@/app/components/category/category.module.css"; // Import the CSS module
 import CategoryBtn from "./category-btn";
+import CategoryHeading from "./category-heading";
 
 export default function CategoryBar() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
